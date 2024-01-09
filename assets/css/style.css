@@ -51,3 +51,33 @@ body {
     --bs-btn-disabled-border-color: #FFC901;
     --bs-gradient: none;
 }
+
+.navbar-dark,
+.navbar[data-bs-theme=dark] {
+    --bs-navbar-color: #ffc80186;
+    --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
+    --bs-navbar-disabled-color: #ffc8014b;
+    --bs-navbar-active-color: #FFC901;
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #FFC901;
+    --bs-navbar-toggler-border-color: #FFC901;
+    --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #FFC901;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid #ffc80186;
+    border-radius: var(--bs-border-radius);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
