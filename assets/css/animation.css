@@ -1,0 +1,53 @@
+@keyframes lampeggiante {
+
+    0%,
+    10% {
+        color: red;
+    }
+
+    10%,
+    20% {
+        color: black;
+    }
+
+    20%,
+    30% {
+        color: white;
+    }
+
+    30%,
+    40% {
+        color: black;
+    }
+
+    40%,
+    50% {
+        color: red;
+    }
+
+    50%,
+    60% {
+        color: black;
+    }
+
+    70%,
+    80% {
+        color: red;
+    }
+
+    80%,
+    90% {
+        color: white;
+    }
+
+    90%,
+    100% {
+        color: red;
+    }
+
+
+}
+
+#crisAnimation {
+    animation: lampeggiante 1s step-start infinite;
+}
