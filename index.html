@@ -8,7 +8,7 @@
 
     <link rel="icon" href="./assets/img/CrashTestHeaderLogoTransparent.png" sizes="829x829" type="image/png">
     <meta property="og:title" content="CRASH-DEST" />
-    <meta property="og:description" content="Una breve lista dei posti in cui Vincenzo si andrà a schiantare" />
+    <meta property="og:description" content="Una lista di posti per andare a morire male!" />
     <meta property="og:image"
         content="https://raw.githubusercontent.com/Vikappa/D2---W2---U2/main/assets/img/Crash_dest_logo.png" />
     <meta property="og:url" content="https://vikappa.github.io/D2---W2---U2/" />
@@ -21,25 +21,34 @@
 <body>
     <nav class="navbar bg-dark border-bottom border-body navbar-expand-md" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./assets/img/CrashTestHeaderLogoTransparent.png" id="navImg"></a>
+            <a class="navbar-brand" href="#"><img class="position-absolute top-0 start-1 img-fluid h-100"
+                    src="./assets/img/CrashTestHeaderLogoTransparent.png"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse paddaloSinistra1" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Trasporti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Schianti</a>
+                        <a class="nav-link" href="#">Saldi</a>
+                    </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Decessi</a>
+                        <a class="nav-link" href="#">Welcome Summer</a>
                     </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Last minute</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Recensioni</a>
+                    </li>
+
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Cerca schianto" aria-label="Search" />
@@ -50,16 +59,22 @@
     </nav>
 
 
-    <header>
-        <div class="container text-white">
-            <div class="row">
-                <img class="col-3" src="./assets/img/Crash_dest_logo_transparent.png" id="headerTitle">
+    <header class="p-5">
 
-                <h5 class="col-9">Scopri le destinazioni più calde del momento!</h5>
+        <div class="container col-12 col-md-10 text-white bg-dark rounded-4 p-4" style="--bs-bg-opacity: .75;">
+            <div class="row">
+
+                <img class="col-lg-4" src="./assets/img/Crash_dest_logo_transparent.png" id="headerTitle">
+                <div class="container col-8 d-flex flex-column justify-content-center align-items-center">
+                    <h5>Scopri le destinazioni più calde del momento!</h5>
+                    <button type="button" class="btn btn-warning mx-auto fw-bold fs-4">PRENOTA ORA!</button>
+                </div>
 
             </div>
         </div>
+
     </header>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
