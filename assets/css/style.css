@@ -109,3 +109,7 @@ body {
 .carousel-inner .carousel-item-start {
     transform: translateX(0);
 }
+
+.card {
+    font-family: 'Michroma', sans-serif;
+}
