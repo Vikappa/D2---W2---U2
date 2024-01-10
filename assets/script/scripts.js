@@ -22,6 +22,27 @@ const differenceInSeconds = function (date1, date2) { //ritorna la differenza in
 let todayDateObg = new Date()
 const offerDateObg = offerDate(todayDateObg)
 
+const coloreTesto = function () {
+    if (document.getElementById('crisAnimation')) {
+        let scrittaTarget = document.getElementById('crisAnimation')
+
+        let randomNumber = Math.floor(Math.random() * 3) + 1
+
+        switch (randomNumber) {
+            case 1:
+                scrittaTarget.style.color = "red"
+                break
+            case 2:
+                scrittaTarget.style.color = "black"
+                break
+            case 3:
+                scrittaTarget.style.color = "white"
+                break
+            default:
+        }
+    }
+}
+
 const aggiornatesto = function () {
     todayDateObg = new Date()
     let timeCrisis = differenceInSeconds(todayDateObg, offerDateObg)
@@ -37,4 +58,6 @@ const aggiornatesto = function () {
     testoScriptato.classList.add('p-3')
 }
 aggiornatesto()
-let interValAggiornaTesto = setInterval(aggiornatesto, 1000)
+coloreTesto()
+let interValAggiornaTesto = setInterval(aggiornatesto, 100)
+let interValDiscoteca = setInterval(coloreTesto, 100)
