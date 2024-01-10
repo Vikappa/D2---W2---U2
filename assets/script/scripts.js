@@ -61,3 +61,5 @@ aggiornatesto()
 coloreTesto()
 let interValAggiornaTesto = setInterval(aggiornatesto, 100)
 let interValDiscoteca = setInterval(coloreTesto, 100)
+
+var multipleCardCarousel = document.getElementById('carouselExampleAutoplaying')
