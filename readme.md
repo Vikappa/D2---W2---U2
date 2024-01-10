@@ -17,6 +17,6 @@ Pagina per un sito di viaggi fatta come esercizio giornaliero durante il corso f
 
 - <img src="./assets/icons/DALLE.png" width="14" height="14" alt="DALL-E"/> **DALL-E** - Ho usato DALL-E per realizzare alcuni asset grafici
 - <img src="./assets/icons/cdnfonts.png" width="14" height="14" alt="CDNFonts"/> **CDNFonts** - Font forniti da CDNFonts
-- <img src="//d2d3qesrx8xj6s.cloudfront.net/favicon.ico" width="14" height="14" alt="CDNFonts"/> **BootSnip** - Snippet per il multi-item carousel rubato da https://bootsnipp.com/snippets/zDQkr
+- <img src="https://cdn0.iconfinder.com/data/icons/social-media-2091/100/social-32-512.png" width="14" height="14" alt="CDNFonts"/> **BootSnip** - Snippet per il multi-item carousel rubato da https://codepen.io/hellomev/pen/LYORMQW
 
 Link: https://vikappa.github.io/D2---W2---U2/
