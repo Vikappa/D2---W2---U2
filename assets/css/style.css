@@ -75,6 +75,14 @@ body {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+.btn-dark {
+    font-family: 'Michroma', sans-serif;
+    color: #FFC901;
+    border-color: #FFC901;
+}
+
+
+
 @media (max-width: 767px) {
     .carousel-inner .carousel-item>div {
         display: none;
