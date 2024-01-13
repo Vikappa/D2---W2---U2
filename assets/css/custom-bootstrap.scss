@@ -87,7 +87,8 @@ $rounded: (
 
   //sottomappa
   values: ( // all'indice "null" abbiamo il valore --bs-border-radius predefinito che ritroviamo nel root degli elementi finiti
-    null: var(--#{$prefix}border-radius),
+    //$prefix è dichiarato alla riga 393 di _variables.scss 
+    null: var(--#{$prefix}border-radius), //
     0: 0, // restituisce  
     1: var(--#{$prefix}border-radius-sm), // in caso si richiede l'1 inserisce la variabile --bs-border-radius-sm
     2: var(--#{$prefix}border-radius-md), // in caso si richiede l'2 inserisce la variabile --bs-border-radius-md
