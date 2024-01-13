@@ -1,0 +1,132 @@
+// qui dentro è dove applicherò le mie personalizzazioni
+
+// da dove parto? per prima cosa è necessario IMPORTARE qui dentro i sorgenti di bootstrap
+// una volta fatto, potrò cambiare i colori, le spaziature, i breakpoints etc.
+// infine, il passo finale sarà RICOMPILARE questi sorgenti "manipolati" in modo da ottenere un
+// bootstrap.css come lo voglio io!
+
+// proviamo a cambiare i colori di default:
+
+@import 'scss/functions'; // l'import di functions è necessario per far funzionare "variables"
+@import 'scss/variables'; // qui sono definite le mappe colore originali
+@import "scss/mixins";
+
+@import url('https://fonts.cdnfonts.com/css/crash-test');
+@import url('https://fonts.cdnfonts.com/css/michroma-2');
+
+body {
+  overflow-x: unset;
+}
+
+.btn-warning {
+  font-family: 'Crash Test', sans-serif !important;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: 'Michroma', sans-serif;
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-clip: border-box;
+}
+
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item>div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item>div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+.card {
+  font-family: 'Michroma', sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+// variabile mappa con valori 
+$rounded: (
+  property: border-radius,
+  class: rounded,
+
+  //sottomappa
+  values: ( // all'indice "null" abbiamo il valore --bs-border-radius predefinito che ritroviamo nel root degli elementi finiti
+    null: var(--#{$prefix}border-radius),
+    0: 0, // restituisce  
+    1: var(--#{$prefix}border-radius-sm), // in caso si richiede l'1 inserisce la variabile --bs-border-radius-sm
+    2: var(--#{$prefix}border-radius-md), // in caso si richiede l'2 inserisce la variabile --bs-border-radius-md
+    3: var(--#{$prefix}border-radius-lg), // in caso si richiede l'3 inserisce la variabile --bs-border-radius-lg
+    4: var(--#{$prefix}border-radius-xl), // in caso si richiede l'4 inserisce la variabile --bs-border-radius-xl
+    5: var(--#{$prefix}border-radius-xxl), // in caso si richiede l'5 inserisce la variabile --bs-border-radius-xxl
+    circle: 50%, // in caso si richiede circle inserisce il valore 50%
+    pill: var(--#{$prefix}border-radius-pill)) // in caso si richiede pill inserisce --bs-border-radius-pill
+);
+
+
+// Mixin per generare le classi
+@mixin generate-rounded-classes {
+
+  //per ogni elemento breakpoint della mappa grid-breakpoits di _variables.scss importata prima
+  @each $breakpoint in map-keys($grid-breakpoints) {
+
+    // per ogni valore della mappa values dentro la variabile $rounded
+    @each $name, $radius in map-get($rounded, values) {
+      //map-get prende la mappa values dentro $rounded
+      // per ogni nome (null, 0, 1, 2 ... pill) esegue il mixin successivo
+
+      //il mixin media-breakpoint-up si traduce in una sorta di mediaquery min-width($breakpoint)
+      //ed è generato dimanicamente assemblando media breakpoint e la logica up
+      @include media-breakpoint-up($breakpoint) {
+
+        //ogni iterazione del del ciclo dentro il ciclo crea una classe .rounded-$breakpoint-$valore-di-round e 
+        //valori di round sono generati in variables e si chiamano --bs-border-radius-sm --bs-border-radius-md ecc
+        // in questa riga viene effettivamente generata la classe 
+        .rounded-#{$breakpoint}-#{$name} {
+          //regole dello stile dinamiche
+          border-radius: $radius;
+        }
+      }
+    }
+  }
+}
+
+//eseguo il mixin di cui sopra e creo una scaterva di mediaquery con dento le classi generate
+@include generate-rounded-classes;
+
+@import "scss/bootstrap.scss"
