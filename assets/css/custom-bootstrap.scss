@@ -103,13 +103,15 @@ $rounded: (
 // Mixin per generare le classi
 @mixin generate-rounded-classes {
 
-  //per ogni elemento breakpoint della mappa grid-breakpoits di _variables.scss importata prima
-  @each $breakpoint in map-keys($grid-breakpoints) {
 
-    // per ogni valore della mappa values dentro la variabile $rounded
-    @each $name, $radius in map-get($rounded, values) {
-      //map-get prende la mappa values dentro $rounded
-      // per ogni nome (null, 0, 1, 2 ... pill) esegue il mixin successivo
+
+  // per ogni valore della mappa values dentro la variabile $rounded
+  @each $name, $radius in map-get($rounded, values) {
+    //map-get prende la mappa values dentro $rounded
+    // per ogni nome (null, 0, 1, 2 ... pill) esegue il mixin successivo
+
+    //per ogni elemento breakpoint della mappa grid-breakpoits di _variables.scss importata prima
+    @each $breakpoint in map-keys($grid-breakpoints) {
 
       //il mixin media-breakpoint-up si traduce in una sorta di mediaquery min-width($breakpoint)
       //ed è generato dimanicamente assemblando media breakpoint e la logica up
@@ -120,7 +122,7 @@ $rounded: (
         // in questa riga viene effettivamente generata la classe 
         .rounded-#{$breakpoint}-#{$name} {
           //regole dello stile dinamiche
-          border-radius: $radius;
+          border-radius: $radius !important;
         }
       }
     }

@@ -12,6 +12,7 @@ Pagina per un sito di viaggi fatta come esercizio giornaliero durante il corso f
 - <img src="./assets/icons/free-javascript-3628858-3029998.png" width="14" height="14" alt="JavaScript icon"/> **JavaScript** - Ho realizzato un metodo che legge la data corrente e ne sorteggia un'altra, modifica il testo dell'offerta del giorno e calcola quanto tempo rimane
 - <img src="./assets/icons/5968672.png" width="14" height="14" alt="Bootstrap icon"/> **BOOTSTRAP** - Tutto il layout è completamente responsive grazie alle classi bootstrap
 - <img src="./assets/icons/sass icon.png" width="14" height="14" alt="Sass Icon"/> **Syntatically Awesome Style Sheet ** - Ho usato sass per modificare il framework bootstrap e aggiungere le classi responsive per modificare i bordi che non esistono di default come rounded-lg-3 o rounded-sm-circle
+(nota: le nuove classi BS custom non funzionano in combinazione con quelle default, quindi "rounded-4 rounded-lg-pill" non funziona, ma "rounded-sm-4 rounded-lg-pill" si)
 
 ## Risorse
 
