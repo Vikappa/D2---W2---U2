@@ -331,6 +331,38 @@ body {
     border-radius: var(--bs-border-radius-pill) !important;
   }
 }
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-item-next:not(.carousel-item-start) {
+    -webkit-transform: translateX(25%) !important;
+            transform: translateX(25%) !important;
+  }
+  .carousel-inner .carousel-item-left.active,
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start,
+  .carousel-item-prev:not(.carousel-item-end) {
+    -webkit-transform: translateX(-25%) !important;
+            transform: translateX(-25%) !important;
+  }
+  .carousel-item-next.carousel-item-start,
+  .active.carousel-item-end {
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+  }
+  .carousel-inner .carousel-item-prev,
+  .carousel-item-prev:not(.carousel-item-end) {
+    -webkit-transform: translateX(-25%) !important;
+            transform: translateX(-25%) !important;
+  }
+  .hoverAnimation:hover {
+    z-index: 1;
+    -webkit-transform: scale(125%);
+            transform: scale(125%);
+    -webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.9);
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.9);
+  }
+}
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
